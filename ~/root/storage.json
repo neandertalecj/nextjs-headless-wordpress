@@ -378,8 +378,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar",
-                                    "checked": true
+                                    "label": "Show &&Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -1466,11 +1465,11 @@
             "folder": "file:///home/neandertalecj/projects/NEXT/nextjs-headless-wordpress",
             "backupPath": "/home/neandertalecj/projects/NEXT/nextjs-headless-wordpress/~/root/Backups/22b37ed97e6a6b4a11d8e7114862820b",
             "uiState": {
-                "mode": 1,
-                "x": 67,
-                "y": 55,
-                "width": 1853,
-                "height": 1025
+                "mode": 0,
+                "x": 463,
+                "y": 618,
+                "width": 1024,
+                "height": 768
             }
         },
         "openedWindows": []
