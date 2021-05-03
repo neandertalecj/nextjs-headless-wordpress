@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "svg": "svgr -d src/components/icons src/components/icons/svgs"
   },
   "dependencies": {
     "@apollo/client": "^3.3.15",
@@ -18,6 +19,7 @@
     "sass": "^1.32.12"
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.0.1",
     "postcss-preset-env": "^6.7.0",

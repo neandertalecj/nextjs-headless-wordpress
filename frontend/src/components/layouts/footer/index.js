@@ -1,5 +1,6 @@
 import { isArray, isEmpty } from 'lodash'
 import { sanitize } from '../../../utils/miscellaneous'
+import {getIconComponentByName} from "../../../utils/icons-map"
 import Link from 'next/link'
 
 const Footer = ({ footer, footerMenus }) => {
@@ -42,7 +43,17 @@ const Footer = ({ footer, footerMenus }) => {
       <div className="mb-8 mt-8 w-full flex flex-wrap">
         <div className="w-full md:w-1/2 lg:w-1/4 text-white">{footer?.copyrightText ? footer.copyrightText : '© Codeytek Academy 2020'}</div>
         <div className="w-full lg:w-3/4 flex justify-end">
-          
+          {!isEmpty(footer?.socialLinks) && isArray(footer?.socialLinks) ? (
+            <ul className="flex items-center">
+              { footer.socialLinks.map( socialLink => (
+                  <li key={ socialLink?.iconName } className="ml-4">
+                      <a href={socialLink?.iconUrl}>
+                          { getIconComponentByName( socialLink?.iconName ) }
+                      </a>
+                  </li>
+              ) ) }
+          </ul>
+          ) : null}
         </div>
       </div>
     </footer>
