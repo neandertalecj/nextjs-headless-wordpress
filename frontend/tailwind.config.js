@@ -9,8 +9,12 @@ module.exports = {
 		'./pages/**/*.js'],
   // darkMode: false, // or 'media' or 'class'
 	theme: {
-		extend: {},
-	},
+    extend: {
+        height: {
+            'almost-screen': 'calc(-16rem + 100vh)'
+        }
+    },
+  },
 	variants: {},
 	plugins: [
 		require( 'tailwindcss' ),

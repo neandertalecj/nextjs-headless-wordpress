@@ -2,15 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import client from '../src/apollo/client'
 import Layout from '../src/components/layouts'
-import { GET_MENUS } from '../src/queries/get-menus'
+// import { GET_MENUS } from '../src/queries/get-menus'
+import {GET_PAGE} from '../src/queries/pages/get-page'
+import { handleRedirectsAndReturnData } from '../src/utils/slug'
 
 export default function Index({ data }) {
-  console.log('---DATA---', data)
+  // console.log('---DATA---', data)
   return (
     <div>
-      {/* <h3 className="text-lg leading-6 font-medium text-grey-900">
-        Aplicant information
-      </h3> */}
       <Layout data={data}>
         content
       </Layout>
@@ -18,21 +17,32 @@ export default function Index({ data }) {
   )
 }
 
-export async function getStaticProps(context) {
-  const { data, loading, networkStatus } = await client.query({
-    query: GET_MENUS
+export async function getStaticProps() {
+  
+  const { data, errors } = await client.query({
+    query: GET_PAGE,
+		variables: {
+			uri: '/', //!! це вкаже в квері шлях!!!
+		},
   })
-  return {
+
+  const defaultProps =  {
     props: {
-      data: {
-        header: data?.header || [],
-        menus: {
-          headerMenus: data?.headerMenus?.edges || [],
-          footerMenus: data?.footerMenus?.edges || [],
-        },
-        footer: data?.footer || [],
-      }
+      data: data || {},
     },
-    revalidate: 1
+    revalidate: 1,
   }
+
+  return handleRedirectsAndReturnData( defaultProps, data, errors, 'page' )//field: 'page
 }
+
+
+// data: {
+//   header: data?.header || [],
+//   menus: {
+//     headerMenus: data?.headerMenus?.edges || [],
+//     footerMenus: data?.footerMenus?.edges || [],
+//   },
+//   footer: data?.footer || [],
+//   page: data?.page || [],  //відсутні дані
+// }

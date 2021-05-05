@@ -6,7 +6,7 @@ const Header = ({ header, headerMenus }) => {
   if ( isEmpty(headerMenus)) {
     return null
   }
-  console.warn('NAV headerMenus', headerMenus)
+  // console.warn('NAV headerMenus', headerMenus)
 
   return (
     <header>

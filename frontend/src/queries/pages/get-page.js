@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client"
 import MenuFragment from "../fragments/menus"
 import { HeaderFooter } from "../get-menus"
+import SeoFragment from "../fragments/seo"
 
 export const GET_PAGE = gql`
 	query GET_PAGE($uri: String) {
@@ -11,8 +12,12 @@ export const GET_PAGE = gql`
 	    content
 	    slug
 	    uri
+      seo {
+        ...SeoFragment
+      }
 	  }
 	}
 	${MenuFragment}
+  ${SeoFragment}
 `
 // ${MenuFragment} бо ${HeaderFooter} не буде працювати!!!
