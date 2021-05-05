@@ -29,6 +29,15 @@
       ),
       'reference' => 'ae03311f45dfe194412081526be2e003960df74b',
     ),
+    'firebase/php-jwt' => 
+    array (
+      'pretty_version' => 'v4.0.0',
+      'version' => '4.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dccf163dc8ed7ed6a00afc06c51ee5186a428d35',
+    ),
     'imranhsayed/headless-cms' => 
     array (
       'pretty_version' => '1.7.0',
@@ -51,6 +60,15 @@
       array (
         0 => '*',
       ),
+    ),
+    'wp-graphql/wp-graphql-jwt-authentication' => 
+    array (
+      'pretty_version' => 'v0.4.0',
+      'version' => '0.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e65055dbd50ca928f466be2c0b7d3c33652694fa',
     ),
   ),
 );

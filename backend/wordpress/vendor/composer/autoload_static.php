@@ -7,6 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit6008fa2c82329d00fcfc3bbc9a19d20c
 {
     public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'WPGraphQL\\JWT_Authentication\\' => 29,
+        ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'C' => 
         array (
             'Composer\\Installers\\' => 20,
@@ -14,6 +22,14 @@ class ComposerStaticInit6008fa2c82329d00fcfc3bbc9a19d20c
     );
 
     public static $prefixDirsPsr4 = array (
+        'WPGraphQL\\JWT_Authentication\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/wp-content/plugins/wp-graphql-jwt-authentication/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
@@ -22,6 +38,10 @@ class ComposerStaticInit6008fa2c82329d00fcfc3bbc9a19d20c
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'WPGraphQL\\JWT_Authentication\\Auth' => __DIR__ . '/../..' . '/wp-content/plugins/wp-graphql-jwt-authentication/src/Auth.php',
+        'WPGraphQL\\JWT_Authentication\\Login' => __DIR__ . '/../..' . '/wp-content/plugins/wp-graphql-jwt-authentication/src/Login.php',
+        'WPGraphQL\\JWT_Authentication\\ManageTokens' => __DIR__ . '/../..' . '/wp-content/plugins/wp-graphql-jwt-authentication/src/ManageTokens.php',
+        'WPGraphQL\\JWT_Authentication\\RefreshToken' => __DIR__ . '/../..' . '/wp-content/plugins/wp-graphql-jwt-authentication/src/RefreshToken.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

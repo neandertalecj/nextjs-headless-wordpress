@@ -7,4 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'WPGraphQL\\JWT_Authentication\\Auth' => $baseDir . '/wp-content/plugins/wp-graphql-jwt-authentication/src/Auth.php',
+    'WPGraphQL\\JWT_Authentication\\Login' => $baseDir . '/wp-content/plugins/wp-graphql-jwt-authentication/src/Login.php',
+    'WPGraphQL\\JWT_Authentication\\ManageTokens' => $baseDir . '/wp-content/plugins/wp-graphql-jwt-authentication/src/ManageTokens.php',
+    'WPGraphQL\\JWT_Authentication\\RefreshToken' => $baseDir . '/wp-content/plugins/wp-graphql-jwt-authentication/src/RefreshToken.php',
 );

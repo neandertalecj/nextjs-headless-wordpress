@@ -9,6 +9,7 @@
   ],
   "require": {
 	"composer/installers": "~1.0",
-	"imranhsayed/headless-cms": "^1.0"
+	"imranhsayed/headless-cms": "^1.0",
+  "wp-graphql/wp-graphql-jwt-authentication": "0.4.0"
   }
 }
